@@ -29,7 +29,7 @@ const config = {
 			{
 				host: 'localhost',
 				port: '3791',
-				proxy: 'https://gmmb-cli.lndo.site'
+				proxy: 'https://climatelead.lndo.site/'
 			}
 		),
 		new extract(
