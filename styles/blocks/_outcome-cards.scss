@@ -1,0 +1,30 @@
+/* =================================================================================
+~ Outcome Cards
+================================================================================= */
+.outcome-cards {
+	&__cards {
+		margin-top: 4rem;
+	}
+
+	&__heading {
+		color: $brand-primary;
+		font-size: 3.4rem;
+		line-height: 1.5;
+		margin-bottom: 1rem;
+		text-align: center;
+	}
+
+	&__intro {
+		margin-bottom: 1rem;
+	}
+
+	&__wrap {
+		margin-top: 4rem;
+	}
+
+	@include media-breakpoint-up(lg) {
+		&__heading {
+			font-size: 6rem;
+		}
+	}
+}

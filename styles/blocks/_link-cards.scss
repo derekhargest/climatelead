@@ -1,0 +1,35 @@
+/* =======================================================================================
+~ Link Cards
+======================================================================================= */
+.link-cards {
+	&__heading {
+		color: $brand-primary;
+		font-size: 3.4rem;
+		margin-bottom: 2.8rem;
+		text-align: center;
+	}
+
+	&--gray {
+		background: $gray-lightest;
+	}
+
+	&--teal {
+		background: $brand-primary;
+
+		.link-cards__heading {
+			color: $white;
+		}
+	}
+
+	&--white {
+		.card {
+
+		}
+	}
+
+	@include media-breakpoint-up(md) {
+		&__heading {
+			font-size: 6rem;
+		}
+	}
+}

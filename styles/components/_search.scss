@@ -1,0 +1,20 @@
+/* =================================================================================
+~ Search - used for styling search results.
+================================================================================= */
+.search {
+	h2 {
+		font-family: $font-family-base;
+		font-weight: $font-weight-demi;
+	}
+
+	&__form {
+		margin-bottom: 4rem;
+	}
+
+	&__results {
+		color: $brand-primary;
+		font-size: 3.4rem;
+		margin-bottom: 8rem;
+		text-align: center;
+	}
+}

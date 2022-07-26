@@ -1,0 +1,23 @@
+/* =================================================================================
+~ Template Name:            Footer Navigation
+~ Template File:            /partials/footer.php
+================================================================================= */
+&--footer {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-bottom: 1.8rem;
+
+	.menu-item {
+		&:not(:last-of-type) {
+			margin-right: 1.5rem;
+		}
+
+		a {
+			&:focus,
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}

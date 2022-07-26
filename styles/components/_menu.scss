@@ -1,0 +1,13 @@
+/* =================================================================================
+~ Menu
+================================================================================= */
+.menu {
+	@import "menus/header";
+	@import "menus/footer";
+}
+
+@include media-breakpoint-up(lg) {
+	.menu-item.menu-item-mobile-only {
+		display: none;
+	}
+}

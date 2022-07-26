@@ -1,0 +1,68 @@
+/* =================================================================================
+~ Text Quote
+================================================================================= */
+.text-quote {
+	display: flex;
+	flex-direction: column;
+
+	&__citation,
+	&__quote {
+		color: $white;
+		line-height: 1.5;
+	}
+
+	&__heading {
+		color: $brand-primary;
+		font-size: 3.4rem;
+		margin-bottom: 2rem;
+	}
+
+	&__right {
+		background: $brand-primary;
+		padding: 3rem;
+	}
+
+	&__quote {
+		font-size: 2.8rem;
+		font-weight: $font-weight-bold;
+		margin-bottom: 1rem;
+
+		&::before {
+			@include icon-font();
+			align-items: center;
+			background: $white;
+			border-radius: 50%;
+			content: '\e807';
+			color: $green-dark;
+			display: flex;
+			height: 8rem;
+			justify-content: center;
+			margin-bottom: 6rem;
+			width: 8rem;
+		}
+	}
+
+	@include media-breakpoint-down(md) {
+		&__left {
+			margin-bottom: 5rem;
+		}
+	}
+
+	@include media-breakpoint-up(lg) {
+		flex-direction: row;
+
+		&__heading {
+			font-size: 6rem;
+		}
+
+		&__left {
+			flex: 1 0 55%;
+		}
+
+		&__right {
+			flex: 1 0 calc(45% - 7rem);
+			margin-left: 7rem;
+			padding: 6rem;
+		}
+	}
+}

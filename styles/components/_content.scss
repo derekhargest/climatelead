@@ -1,0 +1,23 @@
+/* =================================================================================
+~ Content
+================================================================================= */
+
+.content {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+	&:not(.content--pb-0) {
+		@include media-breakpoint-up(sm) {
+			padding-top: 8rem;
+			padding-bottom: 8rem;
+		}
+	}
+
+	&--pb-0 {
+		padding-bottom: 0;
+	}
+
+	&.contact-form {
+		padding-top: 0;
+	}
+}

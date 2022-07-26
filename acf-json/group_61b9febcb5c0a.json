@@ -1,0 +1,80 @@
+{
+    "key": "group_61b9febcb5c0a",
+    "title": "Copy Block",
+    "fields": [
+        {
+            "key": "field_61be09884366d",
+            "label": "Background Color",
+            "name": "copy_block_background_color",
+            "type": "button_group",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "gray": "Gray",
+                "white": "White"
+            },
+            "allow_null": 0,
+            "default_value": "gray",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_61b9fedac73b4",
+            "label": "Text",
+            "name": "copy_block_text",
+            "type": "wysiwyg",
+            "instructions": "General copy block.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "visual",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_type",
+                "operator": "==",
+                "value": "front_page"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-template-team.php"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-template-contact.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1640019000
+}

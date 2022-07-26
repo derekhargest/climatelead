@@ -1,0 +1,97 @@
+/* =================================================================================
+~ Carousel Hero
+================================================================================= */
+.carousel-hero {
+	height: 28rem;
+	overflow: hidden;
+	position: relative;
+
+	&__heading {
+		color: $white;
+		filter: drop-shadow(0 0.3rem 1.6rem rgba(0, 0, 0, 0.7));
+		font-size: 3.4rem;
+		left: 50%;
+		max-width: 100rem;
+		position: absolute;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+		width: 100%;
+	}
+
+	&__slide {
+		height: 100%;
+		position: relative;
+
+		img {
+			height: 100%;
+			left: 50%;
+			object-fit: cover;
+			position: absolute;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			width: 100%;
+		}
+	}
+
+	&__slider {
+		height: 100%;
+		z-index: -1;
+
+		.slick-list,
+		.slick-track,
+		.slick-slide > div {
+			height: 100%;
+		}
+
+		// Fixes 1px line on left of slider.
+		.slick-slide {
+			overflow: hidden;
+		}
+
+		&:not(.slick-initialized) {
+			.carousel-hero__slide:not(:first-of-type) {
+				display: none;
+			}
+		}
+	}
+
+	&__toggle {
+		align-items: center;
+		bottom: 3rem;
+		background: $white;
+		border-radius: 50%;
+		cursor: pointer;
+		display: flex;
+		position: absolute;
+		right: 1.5rem;
+
+		&::after {
+			@include icon-font();
+			content: '\e802';
+			color: $brand-primary;
+			font-size: 3rem;
+		}
+
+		height: 2.4rem;
+		width: 2.4rem;
+
+		&--pause {
+			&::after {
+				content: '\f28c';
+			}
+		}
+	}
+
+	@include media-breakpoint-up(lg) {
+		height: 58rem;
+
+		&__heading {
+			font-size: 7rem;
+		}
+
+		&__toggle {
+			right: 6rem;
+		}
+	}
+}

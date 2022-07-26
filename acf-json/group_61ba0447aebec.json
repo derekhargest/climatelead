@@ -1,0 +1,253 @@
+{
+    "key": "group_61ba0447aebec",
+    "title": "Link Cards",
+    "fields": [
+        {
+            "key": "field_61bf60fb62934",
+            "label": "Status",
+            "name": "link_cards_status",
+            "type": "true_false",
+            "instructions": "Controls the display of the cards on the front-end.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "Enabled",
+            "ui_off_text": "Disabled"
+        },
+        {
+            "key": "field_61ba0470c4913",
+            "label": "Background Color",
+            "name": "link_cards_background_color",
+            "type": "button_group",
+            "instructions": "Select the background color for this section.",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_61bf60fb62934",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "teal": "Teal",
+                "gray": "Gray",
+                "white": "White"
+            },
+            "allow_null": 0,
+            "default_value": "teal",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_61ba083e2a51d",
+            "label": "Card Style",
+            "name": "link_cards_style",
+            "type": "button_group",
+            "instructions": "<p><strong>Banner<\/strong> will display a teal banner above each card.<\/p>\r\n<p><strong>Images<\/strong> will allow you to select images for the cards.<\/p>",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_61bf60fb62934",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "banner": "Banner",
+                "images": "Images"
+            },
+            "allow_null": 0,
+            "default_value": "banner",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_61ba045ec4912",
+            "label": "Heading",
+            "name": "link_cards_heading",
+            "type": "text",
+            "instructions": "Optional heading text.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_61bf60fb62934",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_61ba049ec4914",
+            "label": "Cards",
+            "name": "link_cards_cards",
+            "type": "repeater",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_61bf60fb62934",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 1,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Add Card",
+            "sub_fields": [
+                {
+                    "key": "field_61ba04c0c4915",
+                    "label": "Image",
+                    "name": "link_cards_image",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_61ba083e2a51d",
+                                "operator": "==",
+                                "value": "images"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "id",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": 300,
+                    "min_height": 300,
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_61ba0575c4916",
+                    "label": "Heading",
+                    "name": "link_cards_card_heading",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_61ba06e1c4917",
+                    "label": "Text",
+                    "name": "link_cards_card_text",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 2,
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_61ba0708c4918",
+                    "label": "Link",
+                    "name": "link_cards_card_link",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_type",
+                "operator": "==",
+                "value": "front_page"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "team"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1639934115
+}

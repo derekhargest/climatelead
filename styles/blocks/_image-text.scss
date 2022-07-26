@@ -1,0 +1,76 @@
+/* =================================================================================
+~ Image Text
+================================================================================= */
+.image-text {
+	background: $gray-lightest;
+
+	&__copy {
+		line-height: 1.7;
+	}
+
+	&__heading {
+		color: $brand-primary;
+		font-size: 3.4rem;
+		margin-bottom: 2.2rem;
+	}
+
+	&__image {
+		img {
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+			width: 100%;
+		}
+	}
+
+	&__inner {
+		display: flex;
+		flex-direction: column;
+	}
+
+	@include media-breakpoint-down(lg) {
+		&__image {
+			margin-bottom: 2.2rem;
+			height: 30rem;
+		}
+	}
+
+	@include media-breakpoint-up(xl) {
+		&__heading {
+			font-size: 6rem;
+		}
+
+		&__image {
+			max-height: 60rem;
+		}
+
+		&__inner {
+			flex-direction: row;
+		}
+
+		&:not(.image-text--right) {
+			.image-text {
+				&__image {
+					margin-right: 5.5rem;
+				}
+			}
+		}
+
+		&--right {
+			.image-text {
+				&__image {
+					margin-left: 5.5rem;
+				}
+
+				&__inner {
+					flex-direction: row-reverse;
+				}
+			}
+		}
+
+		&__content,
+		&__image {
+			width: 50%;
+		}
+	}
+}

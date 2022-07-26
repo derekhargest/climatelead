@@ -1,0 +1,35 @@
+/* =================================================================================
+~ Footer
+================================================================================= */
+
+.footer {
+	background: $brand-primary;
+	color: $white;
+	display: flex;
+	font-family: $font-family-alt;
+	line-height: $line-height-base;
+	min-height: 17rem;
+	padding: 1.5rem 0;
+
+	&__container {
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		@include make-container();
+	}
+
+	&__copyright {
+		font-size: 1.6rem;
+		text-align: center;
+	}
+}
+
+// Large and larger
+@include media-breakpoint-up(lg) {
+	.footer {
+		&__container {
+			@include make-container-max-width();
+		}
+	}
+}

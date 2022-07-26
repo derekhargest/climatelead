@@ -1,0 +1,71 @@
+{
+    "key": "group_61b9fc494652f",
+    "title": "Carousel Hero",
+    "fields": [
+        {
+            "key": "field_61b9fc8e96b22",
+            "label": "Images",
+            "name": "carousel_hero_images",
+            "type": "gallery",
+            "instructions": "Select the images to feature in the carousel. <em>Min. Dimensions: 1440x580px<\/em>",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "medium",
+            "insert": "append",
+            "library": "all",
+            "min": 3,
+            "max": 3,
+            "min_width": 1440,
+            "min_height": 580,
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_61b9fcd296b23",
+            "label": "Text",
+            "name": "carousel_hero_text",
+            "type": "text",
+            "instructions": "Text that appears on top of the images, and does <strong>not<\/strong> change.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_type",
+                "operator": "==",
+                "value": "front_page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1641567424
+}

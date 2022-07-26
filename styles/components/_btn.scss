@@ -1,0 +1,45 @@
+/* =================================================================================
+~ Button
+================================================================================= */
+.btn {
+	cursor: pointer;
+	font-weight: $font-weight-bolder;
+	transition: 0.25s all ease-in-out;
+
+	&:not(.btn--secondary) {
+		border-radius: 4rem;
+		padding: 1.8rem 4rem;
+	}
+
+	&--primary {
+		background: $green-light;
+		color: $white;
+
+		&:focus,
+		&:hover {
+			background: $green-dark;
+		}
+	}
+
+	&--secondary {
+		color: $brand-primary;
+
+		&:focus,
+		&:hover {
+			color: $teal-dark;
+		}
+	}
+
+	&--tertiary {
+		background: $brand-primary;
+		border: 0.2rem solid transparent;
+		color: $white;
+
+		&:focus,
+		&:hover {
+			background: $white;
+			border: 0.2rem solid $brand-primary;
+			color: $brand-primary;
+		}
+	}
+}

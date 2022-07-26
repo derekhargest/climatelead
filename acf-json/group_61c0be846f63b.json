@@ -1,0 +1,50 @@
+{
+    "key": "group_61c0be846f63b",
+    "title": "Form Settings",
+    "fields": [
+        {
+            "key": "field_61c0bea40fe5f",
+            "label": "Forms to Open in New Tab",
+            "name": "form_settings_new_tab",
+            "type": "select",
+            "instructions": "<p>Select the forms that should have their redirect open in a new tab<\/p>\r\n<p><em>NOTE:<\/em> this is intended to only be used for forms that download something.<\/p>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "1": "Contact Us",
+                "2": "Sample Download"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 1,
+            "ui": 1,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "theme-options"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1642188355
+}

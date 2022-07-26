@@ -1,0 +1,198 @@
+/* =======================================================================================
+~ Cards
+======================================================================================= */
+.cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(38rem, 1fr));
+	grid-gap: 3rem;
+	grid-auto-flow: dense;
+
+	&--banner {
+		> div {
+			&:nth-of-type(3n + 1) {
+				.card__banner {
+					background: $brand-primary;
+				}
+			}
+
+			&:nth-of-type(3n + 2) {
+				.card__banner {
+					background: rgba($brand-primary, 0.6);
+				}
+			}
+
+			&:nth-of-type(3n + 3) {
+				.card__banner {
+					background: rgba($brand-primary, 0.4);
+				}
+			}
+		}
+	}
+
+	&--gray {
+		.card__inner {
+			background: $gray-lightest;
+		}
+	}
+
+	&--outcome {
+		> div {
+			&:nth-of-type(3n + 1) {
+				background: $brand-primary;
+			}
+
+			&:nth-of-type(3n + 2) {
+				background: $green-light;
+			}
+
+			&:nth-of-type(3n + 3) {
+				background: $teal-dark;
+			}
+		}
+
+		.card {
+			&__heading {
+				color: $white;
+				font-family: $font-family-alt;
+				font-size: 2.7rem;
+				line-height: 1.5;
+				letter-spacing: 0.58px;
+			}
+
+			&__inner {
+				padding: 4rem;
+			}
+
+			&__text {
+				color: $white;
+			}
+
+			@include media-breakpoint-up(lg) {
+				.card__heading {
+					font-size: 5.8rem;
+				}
+			}
+		}
+	}
+
+	&--team {
+		.card {
+			&__heading {
+				font-size: 2.5rem;
+				margin-bottom: 0.5rem;
+			}
+
+			&__inner {
+				height: 100%;
+				padding: 4rem;
+			}
+
+			&__image {
+				margin-bottom: 2rem;
+			}
+
+			&__text {
+				margin-top: 1.5rem;
+			}
+
+			&__title {
+				color: $teal-darker;
+				font-style: italic;
+				font-weight: $font-weight-demi;
+				margin-bottom: 0.5rem;
+			}
+		}
+	}
+
+	&:not(.cards--team):not(.cards--outcome) {
+		.card {
+			&__heading {
+				font-size: 2.7rem;
+				line-height: 1.4;
+				margin-bottom: 1.5rem;
+			}
+
+			&__inner {
+				flex-grow: 1;
+				padding: 3rem 4rem 4rem;
+			}
+		}
+	}
+}
+
+.card {
+	background: $white;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+
+	&__banner {
+		height: 7rem;
+		width: 100%;
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+	}
+
+	&__heading {
+		font-weight: $font-weight-bolder;
+	}
+
+	&__image {
+		flex-shrink: 0;
+		position: relative;
+
+		&::after {
+			content: "";
+			display: block;
+			padding-bottom: 100%;
+		}
+
+		img {
+			position: absolute;
+			height: 100%;
+			object-fit: cover;
+			width: 100%;
+		}
+	}
+
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		transition: 0.25s all ease-in-out;
+	}
+
+	&__link {
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		transition: 0.25s all ease-in-out;
+		width: 100%;
+
+		&:focus,
+		&:hover {
+			~ .card__inner {
+				background: $gray-lighter;
+			}
+
+			~ .card__inner .card__link-text {
+				color: $teal-dark;
+			}
+		}
+	}
+
+	&__link-text {
+		color: $brand-primary;
+		font-weight: $font-weight-bolder;
+		margin-top: 3rem;
+		transition: 0.25s all ease-in-out;
+	}
+
+	&__text {
+		flex-grow: 1;
+	}
+}

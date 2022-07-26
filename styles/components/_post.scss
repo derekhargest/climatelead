@@ -1,0 +1,39 @@
+/* =================================================================================
+~ Post - used for styling posts within the loop ( partials/loop-post.php )
+================================================================================= */
+
+.post {
+	border-bottom: 0.2rem solid $gray;
+	margin-bottom: 6rem;
+	padding-bottom: 3rem;
+
+	&__excerpt {
+		margin-bottom: 3rem;
+	}
+
+	&__link {
+		color: $gray-dark;
+		font-weight: $font-weight-bold;
+		display: block;
+		margin-bottom: 3rem;
+		transition: 0.25s all ease-in-out;
+		word-break: break-all;
+
+		&:focus,
+		&:hover {
+			color: $teal;
+		}
+	}
+
+	&__title {
+		color: $brand-primary;
+		font-size: 2.6rem;
+		margin-bottom: 1rem;
+	}
+
+	@include media-breakpoint-up(lg) {
+		&__title {
+			font-size: 3.4rem;
+		}
+	}
+}

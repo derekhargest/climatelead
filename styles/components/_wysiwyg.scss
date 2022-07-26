@@ -1,0 +1,102 @@
+/* =======================================================================================
+~ WYSIWYG - intended to be used on any element whose content is populated by a CMS WYSIWYG
+======================================================================================= */
+
+.gform_confirmation_wrapper,
+.gform_heading > .gform_description,
+.wysiwyg {
+	line-height: $line-height-base;
+
+	a:not(.btn) {
+		color: $brand-primary;
+
+		&:hover {
+			color: $brand-primary;
+			text-decoration: underline;
+		}
+	}
+
+	ul:not(.gform_fields):not(.gfield_radio):not(.gfield_checkbox),
+	ol {
+		list-style: none;
+		padding-left: 2rem;
+
+		ul, ol {
+			margin-bottom: 0;
+		}
+	}
+	ol {
+		list-style: decimal outside;
+	}
+	ul, ol {
+		> li {
+			&:not(:last-of-type) {
+				margin-bottom: 1rem;
+			}
+		}
+
+		> ul, ol {
+			margin-top: 1rem;
+		}
+	}
+	ul:not(.gform_fields):not(.gfield_radio):not(.gfield_checkbox) {
+		list-style: disc outside;
+	}
+
+	h1 { font-size: 7rem; }
+	h2 { font-size: 6rem; }
+	h3 { font-size: 3.4rem; }
+	h4 { font-size: 2.7rem; }
+	h5 { font-size: 2.4rem; }
+	h6 { font-size: $font-size-base }
+
+    blockquote {
+    	border-left: 1rem solid $brand-primary;
+		font-weight: $font-weight-bold;
+    	padding-left: 1.5rem;
+
+		span {
+			display: block;
+		}
+
+		> * {
+			margin-bottom: 2rem;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+    }
+
+    hr {}
+
+    img, figure {
+    	max-width: 100%;
+    }
+
+	> * {
+		font-size: 2.1rem;
+		margin-bottom: 3.4rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	@include media-breakpoint-up(md) {
+		&--large-font {
+			font-size: 2.7rem;
+		}
+	}
+}
+
+// Extra small only
+@include media-breakpoint-only(xs) {
+	.wysiwyg {
+	    > img,
+	    > .wp-caption {
+	    	width: 100% !important;
+	    	height: auto !important;
+	    }
+	}
+}

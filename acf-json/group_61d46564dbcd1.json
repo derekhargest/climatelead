@@ -1,0 +1,47 @@
+{
+    "key": "group_61d46564dbcd1",
+    "title": "Story Settings",
+    "fields": [
+        {
+            "key": "field_61d465abb073b",
+            "label": "Story Listing Page",
+            "name": "story_settings_story_listing_page",
+            "type": "post_object",
+            "instructions": "Select the page to be used as the \"archive\" page for Stories. This is the page that stories will link back to in the breadcrumbs that appear in the hero of an individual story.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "id",
+            "ui": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "theme-options"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1641311445
+}

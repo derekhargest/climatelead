@@ -1,0 +1,156 @@
+/* =================================================================================
+~ Template Name:            Header Navigation
+~ Template File:            /partials/header.php
+================================================================================= */
+&--header {
+	font-family: $font-family-alt;
+	font-size: 2rem;
+
+	> .menu-item {
+		&.current-menu-item,
+		.sub-menu .current-menu-item {
+			border-bottom: 0.4rem solid $brand-primary;
+		}
+	}
+
+	.menu-item {
+		color: $brand-black;
+		display: flex;
+		flex-direction: column;
+
+		a {
+			padding: 1.4rem 1.8rem;
+		}
+
+		&:hover,
+		&:focus {
+			> a {
+				background: $brand-primary;
+				color: $white;
+			}
+		}
+	}
+
+	.menu-item-has-children {
+		> a {
+			align-items: center;
+			display: flex;
+
+			&::after {
+				@include icon-font();
+				content: '\e800';
+				color: $brand-primary;
+				font-size: 1.4rem;
+				margin-left: 1.5rem;
+			}
+		}
+
+		&:hover,
+		&:focus {
+			> a::after {
+				color: $white;
+			}
+		}
+
+		.sub-menu {
+			background-color: $gray-lightest;
+			display: none;
+			flex-direction: column;
+		}
+	}
+
+	.sub-menu {
+		li {
+			&:not(:last-of-type) {
+				border-bottom: 0.2rem solid $gray-light;
+			}
+		}
+	}
+
+	@include media-breakpoint-down(md) {
+		li:not(:last-of-type) {
+			border-bottom: 0.2rem solid $gray-light;
+		}
+
+		.menu-item-has-children {
+			> a {
+				justify-content: space-between;
+			}
+		}
+
+		.sub-menu {
+			border-top: 0.2rem solid $gray-light;
+
+			.menu-item a {
+				padding-left: 3.6rem;
+			}
+		}
+	}
+
+	@include media-breakpoint-up(lg) {
+		display: flex;
+
+		> .menu-item {
+			margin-right: 2.7rem;
+		}
+
+		.menu-item-has-children {
+			position: relative;
+
+			.sub-menu {
+				box-shadow: 0 0.8rem 1.6rem 0 rgba($black, 0.2);
+				left: 0;
+				min-width: 25rem;
+				position: absolute;
+				top: 100%;
+
+				&:hover {
+					display: block;
+				}
+
+				> li {
+					a {
+						display: inline-block;
+						width: 100%;
+					}
+				}
+
+				&--expanded {
+					display: block;
+				}
+			}
+
+			&.menu-item--focus {
+				> .sub-menu {
+					display: flex;
+				}
+
+				> a {
+					background: $brand-primary;
+					color: $white;
+
+					&::after {
+						color: $white;
+					}
+				}
+			}
+
+			> a {
+				&:focus,
+				&:hover {
+					+ .sub-menu {
+						display: flex;
+					}
+				}
+			}
+		}
+	}
+
+	@include media-breakpoint-up(xl) {
+		font-size: 2.4rem;
+
+		> .menu-item {
+			margin-right: 6.2rem;
+		}
+	}
+}

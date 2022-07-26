@@ -1,0 +1,55 @@
+/* =================================================================================
+~ Pagination
+================================================================================= */
+.pagination {
+	display: flex;
+
+	.page-numbers {
+		border: 0.2rem solid transparent;
+		font-weight: $font-weight-bolder;
+		padding: 1.5rem;
+		transition: 0.25s all ease-in-out;
+
+		&.current,
+		&:not(.dots):focus,
+		&:not(.dots):hover {
+			border-color: $brand-primary;
+		}
+
+		&:not(:last-child) {
+			margin-right: 1.8rem;
+		}
+	}
+
+	.next,
+	.prev {
+		&::after {
+			@include icon-font();
+			color: $brand-primary;
+		}
+	}
+
+	.next {
+		&::after {
+			content: '\e805';
+		}
+	}
+
+	.prev {
+		&::after {
+			content: '\e803';
+		}
+	}
+
+	&--team {
+		margin-top: 6rem;
+	}
+
+	@include media-breakpoint-down(sm) {
+		.page-numbers {
+			&:not(.next):not(.prev):not(.current) {
+				display: none;
+			}
+		}
+	}
+}

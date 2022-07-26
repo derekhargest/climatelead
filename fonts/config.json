@@ -1,0 +1,86 @@
+{
+  "name": "",
+  "css_prefix_text": "icon-",
+  "css_use_suffix": false,
+  "hinting": true,
+  "units_per_em": 1000,
+  "ascent": 850,
+  "glyphs": [
+    {
+      "uid": "ccddff8e8670dcd130e3cb55fdfc2fd0",
+      "css": "down-open",
+      "code": 59392,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "9dd9e835aebe1060ba7190ad2b2ed951",
+      "css": "search",
+      "code": 59393,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "559647a6f430b3aeadbecd67194451dd",
+      "css": "menu",
+      "code": 61641,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "5211af474d3a9848f67f945e2ccaf143",
+      "css": "cancel",
+      "code": 59396,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "e835d9d0f2ee39ae01b01cc6a6fa24ab",
+      "css": "play-circled2",
+      "code": 59394,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "4ae8cbc2c1329cb5dbe6e6995d8c68be",
+      "css": "pause-circle-o",
+      "code": 62092,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "d870630ff8f81e6de3958ecaeac532f2",
+      "css": "left-open",
+      "code": 59395,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "399ef63b1e23ab1b761dfbb5591fa4da",
+      "css": "right-open",
+      "code": 59397,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "fecaa139706b29ed72d1a28e5b19498f",
+      "css": "close-large",
+      "code": 59398,
+      "src": "custom_icons",
+      "selected": true,
+      "svg": {
+        "path": "M618.7 500L975.9 142.7A83.7 83.7 0 0 0 857.4 24.2L500.2 381.5 142.9 24.2A83.7 83.7 0 1 0 24.4 142.7L382 500 24.6 857.2A83.7 83.7 0 1 0 143.1 975.7L500.4 618.4 857.7 975.7A83.7 83.7 0 0 0 976.2 857.2Z",
+        "width": 1000
+      },
+      "search": [
+        "close"
+      ]
+    },
+    {
+      "uid": "601de47fb3796ca74f8727e720333dac",
+      "css": "quote-fancy",
+      "code": 59399,
+      "src": "custom_icons",
+      "selected": true,
+      "svg": {
+        "path": "M982.7 982.7A238.9 238.9 0 0 1 731.7 728.1C735.2 247.6 1141.5 22.9 1141.5 22.9L1191.5 99.1S1013.4 249.5 986.5 477A238.9 238.9 0 0 1 1237.4 731.7 238.6 238.6 0 0 1 985.2 982.7ZM268.2 982.7A238.9 238.9 0 0 1 17.3 727.9C20.8 247.6 427.2 22.9 427.2 22.9L477.1 99.1S299 249.5 272 477A238.9 238.9 0 0 1 523 731.7 238.6 238.6 0 0 1 270.8 982.7Z",
+        "width": 1255
+      },
+      "search": [
+        "quote-fancy"
+      ]
+    }
+  ]
+}

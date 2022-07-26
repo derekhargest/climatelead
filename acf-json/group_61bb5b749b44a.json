@@ -1,0 +1,49 @@
+{
+    "key": "group_61bb5b749b44a",
+    "title": "Search Options",
+    "fields": [
+        {
+            "key": "field_61bb5b96da188",
+            "label": "Hero Background Image",
+            "name": "search_options_hero_image",
+            "type": "image",
+            "instructions": "This image will be used as the background for the hero on the search results page.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": 1440,
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "theme-options"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1639674088
+}

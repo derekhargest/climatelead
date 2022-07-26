@@ -1,0 +1,25 @@
+/* =======================================================================================
+~ Hero
+======================================================================================= */
+.hero {
+	align-items: center;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	min-height: 20rem;
+	position: relative;
+
+	&__heading {
+		color: $white;
+		font-size: 3.4rem;
+	}
+
+	@include media-breakpoint-up(lg) {
+		min-height: 40rem;
+
+		&__heading {
+			font-size: 7rem;
+		}
+	}
+}

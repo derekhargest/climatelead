@@ -1,0 +1,184 @@
+/* =================================================================================
+~ Header
+================================================================================= */
+
+.header {
+	background: $white;
+	display: flex;
+	flex-direction: column;
+	position: sticky;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+
+	&__container {
+		@include make-container();
+		display: flex;
+		flex-direction: column;
+		padding: 1.5rem;
+	}
+
+	&__logo {
+		max-width: 24.7rem;
+	}
+
+	&__main {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__search {
+		&--desktop {
+			align-items: center;
+			border: 0.2rem solid $gray-light;
+			display: none;
+			height: 10rem;
+			margin-top: 0;
+			justify-content: space-between;
+			transition: 0.25s visibility ease-out, 0.25s opacity ease-out, 0.5s margin-top ease-out;
+			width: 100%;
+
+			&.header__search--collapsed {
+				margin-top: -10rem;
+				opacity: 0;
+				visibility: hidden;
+			}
+		}
+
+		&--mobile {
+			border-bottom: 0.2rem solid $gray-light;
+			border-top: 0.2rem solid $gray-light;
+			display: flex;
+			padding: 1.5rem 0;
+		}
+	}
+
+	&__toggle {
+		cursor: pointer;
+		font-size: 2.6rem;
+
+		&:hover,
+		&.active {
+			color: $brand-primary;
+		}
+
+		&::after {
+			@include icon-font();
+			content: '\f0c9';
+		}
+
+		&[aria-expanded="true"] {
+			&::after {
+				content: '\e804';
+			}
+		}
+	}
+
+	&__toggle-search {
+		cursor: pointer;
+		display: none;
+		height: 5.8rem;
+		width: 5.2rem;
+
+		&::after {
+			@include icon-font();
+			content: '\e801';
+		}
+
+		&[aria-expanded="true"] {
+			&::after {
+				content: '\e804';
+			}
+		}
+
+		&:hover,
+		&:focus {
+			background: $brand-primary;
+
+			&::after {
+				color: $white;
+			}
+		}
+	}
+}
+
+// Medium and smaller
+@include media-breakpoint-down(md) {
+	.header {
+		height: 7rem;
+
+		&__nav {
+			background: $white;
+			display: none;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			width: 100%;
+
+			&.active {
+				//display: block;
+				z-index: 999;
+			}
+
+			a {
+				width: 100%;
+			}
+		}
+
+		&__logo {
+			> a {
+				display: flex;
+			}
+
+			img {
+				max-height: 4rem;
+			}
+		}
+	}
+}
+
+// Large and larger
+@include media-breakpoint-up(lg) {
+	.header {
+		&__container {
+			@include make-container-max-width();
+			justify-content: center;
+			min-height: 14.5rem;
+			padding-left: 6rem;
+			padding-right: 6rem;
+			position: relative;
+			z-index: 9;
+		}
+
+		&__menu {
+			display: flex;
+			align-items: center;
+		}
+
+		&__nav {
+			display: flex;
+		}
+
+		&__search {
+			&--mobile {
+				display: none;
+			}
+
+			&--desktop {
+				display: flex;
+			}
+		}
+
+		&__toggle {
+			display: none;
+		}
+
+		&__toggle-search {
+			align-items: center;
+			display: flex;
+			justify-content: center;
+			margin-left: 1.5rem;
+		}
+	}
+}

@@ -1,0 +1,25 @@
+/* =================================================================================
+~ Container
+================================================================================= */
+
+.container {
+    @include make-container();
+
+    &--max-width {
+        @include make-container-max-width();
+    }
+
+	&--narrow-width {
+		max-width: 118rem;
+	}
+
+    &--padded {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+
+		@include media-breakpoint-up(sm) {
+			padding-left: 6rem;
+			padding-right: 6rem;
+		}
+    }
+}
